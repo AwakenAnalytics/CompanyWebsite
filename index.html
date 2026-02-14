@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Awaken Analytics - Professional financial data platform with technical analysis. Access 500+ tickers with 70+ indicators, historical data, and real-time market insights." />
+    <meta name="author" content="Awaken Analytics" />
+    <title>Awaken Analytics | Financial Data & Technical Analysis Platform</title>
+    <link rel="icon" type="image/png" href="LogoSmall.png" />
+    
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    
+    <style>
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+      .skill-item {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 8px;
+        text-align: center;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+      .skill-item:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.15);
+      }
+      .skill-item i {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        color: #0066FF;
+      }
+      .stat-box {
+        background: rgba(0, 102, 255, 0.1);
+        border-left: 4px solid #0066FF;
+        padding: 1.5rem;
+        margin: 1rem 0;
+        border-radius: 4px;
+      }
+      .stat-number {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #0066FF;
+        margin: 0;
+      }
+      .stat-label {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      .project-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+        color: white;
+        padding: 0.25rem 0.75rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        margin: 0.25rem;
+        box-shadow: 0 2px 8px rgba(0, 102, 255, 0.3);
+      }
+      .cta-section {
+        background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+        padding: 3rem;
+        border-radius: 10px;
+        margin: 2rem 0;
+        box-shadow: 0 8px 24px rgba(0, 102, 255, 0.2);
+      }
+      .pricing-card {
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(0, 102, 255, 0.3);
+        border-radius: 12px;
+        padding: 2rem;
+        margin: 1rem 0;
+        transition: all 0.3s ease;
+      }
+      .pricing-card:hover {
+        border-color: #0066FF;
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 102, 255, 0.3);
+      }
+      .pricing-card.featured {
+        border-color: #0066FF;
+        background: rgba(0, 102, 255, 0.1);
+        box-shadow: 0 0 40px rgba(0, 102, 255, 0.2);
+      }
+      .price-tag {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #0066FF;
+      }
+      .feature-list {
+        list-style: none;
+        padding: 0;
+        margin: 1.5rem 0;
+      }
+      .feature-list li {
+        padding: 0.5rem 0;
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .feature-list li i {
+        color: #0066FF;
+        margin-right: 0.5rem;
+      }
+      .trust-badge {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        padding: 1.5rem;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+      .trust-badge:hover {
+        background: rgba(255, 255, 255, 0.08);
+        transform: translateY(-3px);
+      }
+      .trust-badge i {
+        font-size: 2.5rem;
+        color: #0066FF;
+        margin-bottom: 1rem;
+      }
+      .section-tag {
+        display: inline-block;
+        color: #0066FF;
+        font-weight: 600;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+      }
+      .disclaimer {
+        background: rgba(255, 193, 7, 0.1);
+        border-left: 4px solid #ffc107;
+        padding: 1rem;
+        margin: 2rem 0;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.7);
+      }
+    </style>
+  </head>
+  <body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="#page-top">Awaken Analytics</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#codebook">Codebook</a></li>
+            <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Get Started</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Masthead-->
+    <header class="masthead">
+      <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+          <div class="text-center">
+            <h1 class="mx-auto my-0 text-uppercase">Awaken Analytics</h1>
+            <h2 class="text-white-50 mx-auto mt-2 mb-5">Enterprise-Grade Financial Data Infrastructure</h2>
+            <p class="text-white-50 mx-auto mt-2 mb-5" style="max-width: 700px;">Production-ready market data with 70+ pre-calculated technical indicators. Stop building data pipelines, start building strategies.</p>
+            <a class="btn btn-primary btn-lg" href="#features">Explore Data</a>
+            <a class="btn btn-outline-light btn-lg ms-3" href="SampleData.pdf" download>Download Sample</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Page 2: Features & Platform -->
+    <section id="features" style="background: #0a0a0a; padding-top: 80px; padding-bottom: 100px;">
+      <div class="container px-4 px-lg-5">
+
+        <!-- Stats Bar -->
+        <div class="row gx-4 text-center mb-5">
+          <div class="col-md-3 mb-4 mb-md-0">
+            <div class="trust-badge">
+              <i class="fas fa-database"></i>
+              <h3 class="text-white mb-2" style="font-size: 2rem;">500+</h3>
+              <p class="text-white-50 mb-0 small">Tickers Covered</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 mb-md-0">
+            <div class="trust-badge">
+              <i class="fas fa-chart-bar"></i>
+              <h3 class="text-white mb-2" style="font-size: 2rem;">70+</h3>
+              <p class="text-white-50 mb-0 small">Technical Indicators</p>
+            </div>
+          </div>
+          <div class="col-md-3 mb-4 mb-md-0">
+            <div class="trust-badge">
+              <i class="fas fa-clock"></i>
+              <h3 class="text-white mb-2" style="font-size: 2rem;">10+</h3>
+              <p class="text-white-50 mb-0 small">Years of History</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="trust-badge">
+              <i class="fas fa-sync"></i>
+              <h3 class="text-white mb-2" style="font-size: 2rem;">Hourly</h3>
+              <p class="text-white-50 mb-0 small">Data Updates</p>
+            </div>
+          </div>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.08); margin: 60px 0;">
+
+        <!-- Why Awaken Analytics -->
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-10 text-center">
+            <span class="section-tag">WHY AWAKEN ANALYTICS</span>
+            <h2 class="text-white mb-5" style="font-size: 2.5rem;">Stop Building Pipelines.<br>Start Building Strategies.</h2>
+            <div class="row mt-4 text-start">
+              <div class="col-md-6 mb-4">
+                <div style="background: rgba(0, 102, 255, 0.05); border-left: 3px solid #0066FF; padding: 2rem; border-radius: 8px; height: 100%;">
+                  <h4 class="text-white mb-3"><i class="fas fa-times-circle" style="color: #dc3545; margin-right: 10px;"></i>Without Awaken Analytics</h4>
+                  <ul class="text-white-50" style="line-height: 2;">
+                    <li>Build and maintain data pipelines</li>
+                    <li>Implement 70+ indicators from scratch</li>
+                    <li>Debug calculation discrepancies</li>
+                    <li>Manage data storage and updates</li>
+                    <li>Weeks of development time</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-6 mb-4">
+                <div style="background: rgba(0, 102, 255, 0.1); border-left: 3px solid #10B981; padding: 2rem; border-radius: 8px; height: 100%;">
+                  <h4 class="text-white mb-3"><i class="fas fa-check-circle" style="color: #10B981; margin-right: 10px;"></i>With Awaken Analytics</h4>
+                  <ul class="text-white-50" style="line-height: 2;">
+                    <li>Plug-and-play data access</li>
+                    <li>All indicators pre-calculated</li>
+                    <li>Validated, production-ready data</li>
+                    <li>Automatic updates & maintenance</li>
+                    <li>Launch in hours, not weeks</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.08); margin: 60px 0;">
+
+        <!-- Infrastructure Features -->
+        <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+          <div class="col-lg-10 text-center">
+            <span class="section-tag">INFRASTRUCTURE</span>
+            <h2 class="text-white mb-4" style="font-size: 2.5rem;">Production-Ready Platform</h2>
+            <p class="text-white-50 mb-4">Everything you need to launch and scale your trading platform</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-10 mx-auto">
+            <div class="skills-grid">
+              <div class="skill-item">
+                <i class="fas fa-chart-line"></i>
+                <h5 class="text-white mt-2">Real-Time Feeds</h5>
+                <p class="text-white-50 small mb-0">Sub-second market data delivery</p>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-history"></i>
+                <h5 class="text-white mt-2">Deep History</h5>
+                <p class="text-white-50 small mb-0">10+ years for backtesting</p>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-calculator"></i>
+                <h5 class="text-white mt-2">Battle-Tested Analytics</h5>
+                <p class="text-white-50 small mb-0">70+ validated indicators</p>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-download"></i>
+                <h5 class="text-white mt-2">Flexible Integration</h5>
+                <p class="text-white-50 small mb-0">REST API, WebSocket, CSV</p>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-clock"></i>
+                <h5 class="text-white mt-2">Multi-Timeframe</h5>
+                <p class="text-white-50 small mb-0">Intraday to daily resolution</p>
+              </div>
+              <div class="skill-item">
+                <i class="fas fa-shield-alt"></i>
+                <h5 class="text-white mt-2">99.9% Uptime</h5>
+                <p class="text-white-50 small mb-0">Production-grade reliability</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.08); margin: 60px 0;">
+
+        <!-- Data Coverage -->
+        <div class="text-center mb-5">
+          <span class="section-tag">DATA COVERAGE</span>
+          <h2 class="text-white mb-3" style="font-size: 2.5rem;">Comprehensive Market Data</h2>
+          <p class="text-white-50">Real-time and historical data across global markets with complete technical analysis</p>
+        </div>
+        <div class="row gx-4">
+          <div class="col-lg-4">
+            <div class="pricing-card featured">
+              <div class="text-center mb-2">
+                <span class="project-badge">LIVE NOW</span>
+              </div>
+              <div class="text-center mb-3">
+                <i class="fas fa-landmark" style="font-size: 3rem; color: #0066FF;"></i>
+              </div>
+              <h3 class="text-white text-center mb-3">BIST (Borsa Istanbul)</h3>
+              <p class="text-white-50 text-center mb-4">
+                Complete coverage of Borsa Istanbul including all BIST indices and individual stocks with hourly updates.
+              </p>
+              <ul class="feature-list">
+                <li><i class="fas fa-check"></i> 500+ Turkish stocks & indices</li>
+                <li><i class="fas fa-check"></i> 10+ years historical data</li>
+                <li><i class="fas fa-check"></i> Hourly & daily timeframes</li>
+                <li><i class="fas fa-check"></i> 70+ technical indicators</li>
+                <li><i class="fas fa-check"></i> Real-time data feeds</li>
+              </ul>
+              <a class="btn btn-primary w-100 mt-3" href="#pricing">View Pricing</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="pricing-card">
+              <div class="text-center mb-2">
+                <span class="project-badge" style="background: linear-gradient(135deg, #7C3AED 0%, #6366F1 100%);">COMING SOON</span>
+              </div>
+              <div class="text-center mb-3">
+                <i class="fas fa-globe" style="font-size: 3rem; color: #0066FF;"></i>
+              </div>
+              <h3 class="text-white text-center mb-3">Global Markets</h3>
+              <p class="text-white-50 text-center mb-4">
+                Expanding to NASDAQ, NYSE, LSE, and other major global exchanges with comprehensive data.
+              </p>
+              <ul class="feature-list">
+                <li><i class="fas fa-globe"></i> NASDAQ & NYSE in development</li>
+                <li><i class="fas fa-globe"></i> European exchanges planned</li>
+                <li><i class="fas fa-globe"></i> Asian markets on roadmap</li>
+                <li><i class="fas fa-globe"></i> Multi-currency support</li>
+                <li><i class="fas fa-globe"></i> Cross-market analysis</li>
+              </ul>
+              <a class="btn btn-outline-light w-100 mt-3" href="#contact">Join Waitlist</a>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="pricing-card">
+              <div class="text-center mb-2">
+                <span class="project-badge" style="background: linear-gradient(135deg, #7C3AED 0%, #6366F1 100%);">ROADMAP</span>
+              </div>
+              <div class="text-center mb-3">
+                <i class="fab fa-bitcoin" style="font-size: 3rem; color: #0066FF;"></i>
+              </div>
+              <h3 class="text-white text-center mb-3">Cryptocurrency</h3>
+              <p class="text-white-50 text-center mb-4">
+                24/7 data and technical analysis for major digital assets with crypto-adapted indicators.
+              </p>
+              <ul class="feature-list">
+                <li><i class="fab fa-bitcoin"></i> Major cryptocurrencies</li>
+                <li><i class="fab fa-bitcoin"></i> 24/7 real-time data feeds</li>
+                <li><i class="fab fa-bitcoin"></i> Crypto-specific indicators</li>
+                <li><i class="fab fa-bitcoin"></i> DeFi token coverage</li>
+                <li><i class="fab fa-bitcoin"></i> Exchange aggregation</li>
+              </ul>
+              <a class="btn btn-outline-light w-100 mt-3" href="#contact">Join Waitlist</a>
+            </div>
+          </div>
+        </div>
+
+        <hr style="border-color: rgba(255,255,255,0.08); margin: 60px 0;">
+
+        <!-- Codebook -->
+        <div id="codebook" class="row gx-0 align-items-center">
+          <div class="col-xl-5 col-lg-6 order-lg-2">
+            <div style="background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%); padding: 3rem; border-radius: 8px; box-shadow: 0 12px 32px rgba(0, 102, 255, 0.3);">
+              <div class="text-center text-white p-4">
+                <i class="fas fa-book fa-4x mb-4" style="opacity: 0.9;"></i>
+                <h3 class="mb-3">Data Fields Preview</h3>
+                <div class="text-start" style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 0.9rem;">
+                  <div style="margin-bottom: 0.75rem;"><span style="color: #ffc107;">RSI</span> <span style="opacity: 0.7;">|</span> Relative Strength Index</div>
+                  <div style="margin-bottom: 0.75rem;"><span style="color: #ffc107;">MACD</span> <span style="opacity: 0.7;">|</span> Moving Average Convergence</div>
+                  <div style="margin-bottom: 0.75rem;"><span style="color: #ffc107;">BB_Upper</span> <span style="opacity: 0.7;">|</span> Bollinger Band Upper</div>
+                  <div style="margin-bottom: 0.75rem;"><span style="color: #ffc107;">ADX</span> <span style="opacity: 0.7;">|</span> Average Directional Index</div>
+                  <div style="margin-bottom: 0.75rem;"><span style="color: #ffc107;">OBV</span> <span style="opacity: 0.7;">|</span> On-Balance Volume</div>
+                  <div style="opacity: 0.6; text-align: center; margin-top: 1rem;">+ 65 more indicators...</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-7 col-lg-6 order-lg-1">
+            <div class="p-4">
+              <span class="section-tag">DOCUMENTATION</span>
+              <h2 class="text-white mb-4" style="font-size: 2.5rem;">Complete Data Codebook</h2>
+              <p class="text-white-50 mb-4" style="font-size: 1.05rem; line-height: 1.7;">
+                Every field in our dataset is thoroughly documented. Our comprehensive codebook provides detailed explanations of all 70+ technical indicators, including calculation methods, interpretation guidelines, and practical usage examples.
+              </p>
+              <ul class="text-white-50 mb-4">
+                <li><strong>Momentum Indicators:</strong> RSI, CCI, MFI, MACD variants</li>
+                <li><strong>Trend Indicators:</strong> ADX, EMAs, Ichimoku Cloud, SuperTrend</li>
+                <li><strong>Volatility Measures:</strong> Bollinger Bands, ATR, Swing levels</li>
+                <li><strong>Volume Analysis:</strong> OBV, CMF, Accumulation/Distribution</li>
+                <li><strong>Support & Resistance:</strong> Fibonacci levels, Pivot Points</li>
+              </ul>
+              <a class="btn btn-primary btn-lg" href="Codebook.html">
+                <i class="fas fa-book-open me-2"></i>Explore Full Codebook
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Page 3: Pricing -->
+    <section id="pricing" style="background: #161616; padding-top: 100px; padding-bottom: 100px;">
+      <div class="container px-4 px-lg-5">
+        <div class="text-center mb-5">
+          <span class="section-tag">PRICING</span>
+          <h2 class="text-white mb-3" style="font-size: 2.5rem;">Simple, Transparent Pricing</h2>
+          <p class="text-white-50">Enterprise-grade data at startup-friendly prices</p>
+        </div>
+
+        <div class="row gx-4">
+          <div class="col-lg-4">
+            <div class="pricing-card">
+              <h3 class="text-white text-center mb-3">Starter</h3>
+              <div class="text-center mb-4">
+                <span class="price-tag">$29</span>
+                <span class="text-white-50">/month</span>
+              </div>
+              <ul class="feature-list">
+                <li><i class="fas fa-check"></i> 100 tickers</li>
+                <li><i class="fas fa-check"></i> 30+ technical indicators</li>
+                <li><i class="fas fa-check"></i> Daily data</li>
+                <li><i class="fas fa-check"></i> 2 years historical data</li>
+                <li><i class="fas fa-check"></i> CSV export</li>
+                <li><i class="fas fa-check"></i> Email support</li>
+              </ul>
+              <a class="btn btn-outline-light w-100 mt-3" href="#contact">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="pricing-card featured">
+              <div class="text-center mb-2">
+                <span class="project-badge">MOST POPULAR</span>
+              </div>
+              <h3 class="text-white text-center mb-3">Professional</h3>
+              <div class="text-center mb-4">
+                <span class="price-tag">$79</span>
+                <span class="text-white-50">/month</span>
+              </div>
+              <ul class="feature-list">
+                <li><i class="fas fa-check"></i> 500+ tickers</li>
+                <li><i class="fas fa-check"></i> 70+ technical indicators</li>
+                <li><i class="fas fa-check"></i> Hourly & daily data</li>
+                <li><i class="fas fa-check"></i> 10+ years historical data</li>
+                <li><i class="fas fa-check"></i> CSV, JSON, API access</li>
+                <li><i class="fas fa-check"></i> Real-time data</li>
+                <li><i class="fas fa-check"></i> Priority support</li>
+              </ul>
+              <a class="btn btn-primary w-100 mt-3" href="#contact">Get Started</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="pricing-card">
+              <h3 class="text-white text-center mb-3">Enterprise</h3>
+              <div class="text-center mb-4">
+                <span class="price-tag">Custom</span>
+              </div>
+              <ul class="feature-list">
+                <li><i class="fas fa-check"></i> Unlimited tickers</li>
+                <li><i class="fas fa-check"></i> All indicators</li>
+                <li><i class="fas fa-check"></i> All timeframes</li>
+                <li><i class="fas fa-check"></i> Full historical archive</li>
+                <li><i class="fas fa-check"></i> Custom integrations</li>
+                <li><i class="fas fa-check"></i> Dedicated support</li>
+                <li><i class="fas fa-check"></i> Volume discounts</li>
+              </ul>
+              <a class="btn btn-outline-light w-100 mt-3" href="#contact">Contact Sales</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="disclaimer mt-5">
+          <i class="fas fa-info-circle me-2"></i>
+          <strong>Disclaimer:</strong> Awaken Analytics provides financial data and technical analysis tools for informational purposes only. This is not financial advice. Trading and investing involve substantial risk of loss. Past performance does not guarantee future results. Always conduct your own research and consult with a qualified financial advisor before making investment decisions.
+        </div>
+      </div>
+    </section>
+
+    <!-- About / Story Section -->
+    <section class="about-section text-center" style="padding-top: 100px; padding-bottom: 100px; background: #161616;" id="about">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8">
+            <span class="section-tag">ABOUT</span>
+            <h2 class="text-white mb-4" style="font-size: 2.5rem;">Built by Traders, For Traders</h2>
+            <p class="text-white-50 mb-4" style="font-size: 1.1rem; line-height: 1.8;">
+              Awaken Analytics was founded to solve a problem we faced ourselves: reliable, pre-calculated technical indicators at scale. After spending weeks building and debugging data pipelines for trading systems, we knew there had to be a better way.
+            </p>
+            <p class="text-white-50 mb-5" style="font-size: 1.1rem; line-height: 1.8;">
+              Now we provide institutional-grade financial data infrastructure so developers and traders can focus on what matters: building great strategies, not maintaining data pipelines.
+            </p>
+
+            <div class="row mt-5">
+              <div class="col-md-4 mb-4">
+                <div class="stat-box">
+                  <i class="fas fa-rocket" style="font-size: 2rem; color: #0066FF; margin-bottom: 1rem;"></i>
+                  <p class="stat-label">MISSION</p>
+                  <p class="text-white-50" style="font-size: 0.95rem;">Democratize access to institutional-quality financial data</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="stat-box">
+                  <i class="fas fa-bullseye" style="font-size: 2rem; color: #0066FF; margin-bottom: 1rem;"></i>
+                  <p class="stat-label">VISION</p>
+                  <p class="text-white-50" style="font-size: 0.95rem;">Power the next generation of trading platforms globally</p>
+                </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                <div class="stat-box">
+                  <i class="fas fa-heart" style="font-size: 2rem; color: #0066FF; margin-bottom: 1rem;"></i>
+                  <p class="stat-label">VALUES</p>
+                  <p class="text-white-50" style="font-size: 0.95rem;">Reliability, transparency, and developer-first approach</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section style="background: #0a0a0a; padding-top: 100px; padding-bottom: 100px;" id="blog">
+      <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8 text-center">
+            <span class="section-tag">BLOG</span>
+            <h2 class="text-white mb-4" style="font-size: 2.5rem;">Market Insights & Tutorials</h2>
+            <p class="text-white-50 mb-4" style="font-size: 1.1rem; line-height: 1.8;">
+              Learn how to effectively use technical indicators, understand market dynamics, and optimize your trading strategies with data-driven insights from our team.
+            </p>
+            <div class="mb-5">
+              <span class="project-badge"><i class="fas fa-chart-line me-1"></i> Technical Analysis</span>
+              <span class="project-badge"><i class="fas fa-chart-bar me-1"></i> Market Trends</span>
+              <span class="project-badge"><i class="fas fa-code me-1"></i> API Guides</span>
+              <span class="project-badge"><i class="fas fa-lightbulb me-1"></i> Strategy Tips</span>
+            </div>
+            <a class="btn btn-primary btn-lg" href="Blogs.html">
+              <i class="fas fa-book-open me-2"></i>Read Latest Posts
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Page 5: Contact -->
+    <section id="contact" style="background: #0a0a0a; padding-top: 100px; padding-bottom: 100px;">
+      <div class="container px-4 px-lg-5">
+
+        <!-- Quick Questions -->
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+          <div class="col-lg-8">
+            <div style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 8px;">
+              <h5 class="text-white mb-3 text-center">Quick Questions?</h5>
+              <div class="row text-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <p class="text-white-50 small mb-2">Need pricing info?</p>
+                  <a href="mailto:awakenanalyticstr@gmail.com?subject=Pricing Inquiry" class="text-white">Email us</a>
+                </div>
+                <div class="col-md-4 mb-3 mb-md-0">
+                  <p class="text-white-50 small mb-2">Want to see a demo?</p>
+                  <a href="https://calendar.app.google/AH8J7k6rWhBkp3z29" target="_blank" class="text-white">Book a call</a>
+                </div>
+                <div class="col-md-4">
+                  <p class="text-white-50 small mb-2">Technical questions?</p>
+                  <a href="mailto:awakenanalyticstr@gmail.com?subject=Technical Question" class="text-white">Ask an expert</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer bg-black small text-center text-white-50">
+      <div class="container px-4 px-lg-5">
+        <p class="mb-2">Copyright &copy; 2025 Awaken Analytics. All rights reserved.</p>
+        <p class="mb-0 text-white-50" style="opacity: 0.7;">Enterprise financial data infrastructure for trading platforms</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

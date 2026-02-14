@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Awaken Analytics Data Codebook - Complete documentation of all technical indicators and data fields" />
+    <meta name="author" content="Awaken Analytics" />
+    <title>Data Codebook | Awaken Analytics</title>
+    <link rel="icon" type="image/png" href="LogoSmall.png" />
+
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+      body {
+        background-color: #1a1a1a;
+        padding-top: 80px;
+      }
+
+      .codebook-header {
+        background: linear-gradient(135deg, #0066FF 0%, #0052CC 100%);
+        padding: 4rem 0 3rem 0;
+        margin-bottom: 3rem;
+      }
+
+      .category-section {
+        background: rgba(255, 255, 255, 0.03);
+        border-left: 4px solid #0066FF;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border-radius: 8px;
+      }
+
+      .category-title {
+        color: #0066FF;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .field-item {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.25rem;
+        margin-bottom: 1rem;
+        border-radius: 6px;
+        border: 1px solid rgba(100, 161, 157, 0.2);
+        transition: all 0.3s ease;
+      }
+
+      .field-item:hover {
+        border-color: #0066FF;
+        background: rgba(255, 255, 255, 0.08);
+      }
+
+      .field-name {
+        color: #0066FF;
+        font-weight: 700;
+        font-size: 1.1rem;
+        font-family: 'Courier New', monospace;
+        margin-bottom: 0.5rem;
+      }
+
+      .field-description {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+      }
+
+      .field-type {
+        display: inline-block;
+        background: rgba(100, 161, 157, 0.2);
+        color: #0066FF;
+        padding: 0.25rem 0.75rem;
+        border-radius: 12px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .search-box {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(100, 161, 157, 0.3);
+        border-radius: 8px;
+        padding: 0.75rem 1rem;
+        color: white;
+        width: 100%;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+      }
+
+      .search-box:focus {
+        outline: none;
+        border-color: #0066FF;
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .toc {
+        background: rgba(255, 255, 255, 0.05);
+        padding: 1.5rem;
+        border-radius: 8px;
+        margin-bottom: 2rem;
+        position: sticky;
+        top: 100px;
+      }
+
+      .toc a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        display: block;
+        padding: 0.5rem 0;
+        transition: color 0.3s ease;
+      }
+
+      .toc a:hover {
+        color: #0066FF;
+      }
+
+      .badge-count {
+        background: #0066FF;
+        color: white;
+        padding: 0.15rem 0.5rem;
+        border-radius: 10px;
+        font-size: 0.75rem;
+        margin-left: 0.5rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+      <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html">Awaken Analytics</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive">
+          Menu
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#pricing">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="index.html#contact">Get Started</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="codebook-header">
+      <div class="container px-4 px-lg-5">
+        <div class="text-center text-white">
+          <h1 class="mb-3">Data Codebook</h1>
+          <p class="lead mb-0">Complete documentation of all fields and technical indicators in our dataset</p>
+          <p class="mt-2" style="color: rgba(255, 255, 255, 0.7);">
+            <i class="fas fa-database me-2"></i>70+ Technical Indicators
+            <i class="fas fa-chart-line ms-4 me-2"></i>Real-Time & Historical Data
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container px-4 px-lg-5 mb-5">
+      <div class="row">
+        <!-- Table of Contents -->
+        <div class="col-lg-3">
+          <div class="toc">
+            <h5 class="text-white mb-3">Categories</h5>
+            <a href="#basic"><i class="fas fa-tag me-2"></i>Basic Information</a>
+            <a href="#momentum"><i class="fas fa-tachometer-alt me-2"></i>Momentum Indicators</a>
+            <a href="#trend"><i class="fas fa-chart-line me-2"></i>Trend Indicators</a>
+            <a href="#volatility"><i class="fas fa-wave-square me-2"></i>Volatility Indicators</a>
+            <a href="#volume"><i class="fas fa-signal me-2"></i>Volume Indicators</a>
+            <a href="#support"><i class="fas fa-layer-group me-2"></i>Support & Resistance</a>
+            <a href="#price"><i class="fas fa-dollar-sign me-2"></i>Price Data</a>
+          </div>
+        </div>
+
+        <!-- Fields Documentation -->
+        <div class="col-lg-9">
+          <!-- Search -->
+          <input type="text" class="search-box" id="searchBox" placeholder="Search indicators... (e.g., RSI, MACD, Bollinger)">
+
+          <!-- Basic Information -->
+          <div class="category-section" id="basic">
+            <h2 class="category-title">
+              <i class="fas fa-tag"></i>
+              Basic Information
+              <span class="badge-count">2</span>
+            </h2>
+
+            <div class="field-item">
+              <div class="field-name">Ticker</div>
+              <div class="field-description">Stock ticker symbol (e.g., AEFES.IS for Anadolu Efes on Borsa Istanbul)</div>
+              <span class="field-type">String</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Date</div>
+              <div class="field-description">Timestamp of the data point in ISO 8601 format with timezone (UTC)</div>
+              <span class="field-type">Datetime</span>
+            </div>
+          </div>
+
+          <!-- Momentum Indicators -->
+          <div class="category-section" id="momentum">
+            <h2 class="category-title">
+              <i class="fas fa-tachometer-alt"></i>
+              Momentum Indicators
+              <span class="badge-count">8</span>
+            </h2>
+
+            <div class="field-item">
+              <div class="field-name">RSI</div>
+              <div class="field-description">Relative Strength Index (0-100). Measures the magnitude of recent price changes to evaluate overbought or oversold conditions. Values above 70 indicate overbought, below 30 indicate oversold.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">RSI_Status</div>
+              <div class="field-description">Categorical interpretation of RSI: "Overbought" (>70), "Oversold" (<30), or "Neutral"</div>
+              <span class="field-type">String</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">CCI</div>
+              <div class="field-description">Commodity Channel Index. Measures current price level relative to average price level over a given period. Values above +100 indicate strong uptrend, below -100 indicate strong downtrend.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">MFI</div>
+              <div class="field-description">Money Flow Index (0-100). Volume-weighted RSI that measures buying and selling pressure. Above 80 is overbought, below 20 is oversold.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">ROC</div>
+              <div class="field-description">Rate of Change. Percentage change in price over a specified period, measuring momentum.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">MACD_12_26_9</div>
+              <div class="field-description">MACD Line. Difference between 12-period and 26-period exponential moving averages. Positive values suggest bullish momentum.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">MACDs_12_26_9</div>
+              <div class="field-description">MACD Signal Line. 9-period EMA of the MACD line, used to generate trading signals.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">MACDh_12_26_9</div>
+              <div class="field-description">MACD Histogram. Difference between MACD line and signal line. Shows convergence/divergence and momentum strength.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">MACDAS</div>
+              <div class="field-description">MACD Acceleration/Deceleration. Measures the rate of change in MACD histogram.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">MACDAS_Signal</div>
+              <div class="field-description">Signal line for MACD Acceleration, smoothed version for crossover signals.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">MACD_Signal</div>
+              <div class="field-description">Overall MACD signal interpretation: "Bullish" or "Bearish" based on MACD and signal line relationship.</div>
+              <span class="field-type">String</span>
+            </div>
+          </div>
+
+          <!-- Trend Indicators -->
+          <div class="category-section" id="trend">
+            <h2 class="category-title">
+              <i class="fas fa-chart-line"></i>
+              Trend Indicators
+              <span class="badge-count">17</span>
+            </h2>
+
+            <div class="field-item">
+              <div class="field-name">ADX</div>
+              <div class="field-description">Average Directional Index (0-100). Measures trend strength regardless of direction. Values above 25 indicate strong trend, below 20 indicate weak/no trend.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">EMA_20</div>
+              <div class="field-description">20-period Exponential Moving Average. Short-term trend indicator, more responsive to recent price changes.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">EMA_50</div>
+              <div class="field-description">50-period Exponential Moving Average. Medium-term trend indicator.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">EMA_200</div>
+              <div class="field-description">200-period Exponential Moving Average. Long-term trend indicator, major support/resistance level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">kama</div>
+              <div class="field-description">Kaufman Adaptive Moving Average. Adjusts smoothing based on market volatility for better trend identification.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FWMA</div>
+              <div class="field-description">Fibonacci Weighted Moving Average. Uses Fibonacci sequence for weighting, emphasizing recent prices.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">VWAP</div>
+              <div class="field-description">Volume Weighted Average Price. Average price weighted by volume, important institutional benchmark.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Tenkan</div>
+              <div class="field-description">Ichimoku Conversion Line. (9-period high + 9-period low) / 2. Short-term trend indicator.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Kijun</div>
+              <div class="field-description">Ichimoku Base Line. (26-period high + 26-period low) / 2. Medium-term trend and support/resistance.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Senkou_A</div>
+              <div class="field-description">Ichimoku Leading Span A. (Tenkan + Kijun) / 2, plotted 26 periods ahead. Forms cloud edge.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Senkou_B</div>
+              <div class="field-description">Ichimoku Leading Span B. (52-period high + 52-period low) / 2, plotted 26 periods ahead. Forms cloud edge.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Chikou</div>
+              <div class="field-description">Ichimoku Lagging Span. Current closing price plotted 26 periods back, confirms trend.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Cloud_Position</div>
+              <div class="field-description">Price position relative to Ichimoku cloud: "Above_Cloud" (bullish), "Below_Cloud" (bearish), "In_Cloud" (neutral).</div>
+              <span class="field-type">String</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">TK_Cross</div>
+              <div class="field-description">Ichimoku Tenkan-Kijun crossover signal: "Bullish" (Tenkan crosses above Kijun) or "Bearish" (crosses below).</div>
+              <span class="field-type">String</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">SUPERT_10_3.0</div>
+              <div class="field-description">SuperTrend indicator value (period=10, multiplier=3.0). Dynamic support/resistance that follows price trends.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">SUPERTd_10_3.0</div>
+              <div class="field-description">SuperTrend direction: 1 (uptrend/bullish) or -1 (downtrend/bearish).</div>
+              <span class="field-type">Integer</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">SUPERTl_10_3.0</div>
+              <div class="field-description">SuperTrend Long value (support level during uptrends).</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">SUPERTs_10_3.0</div>
+              <div class="field-description">SuperTrend Short value (resistance level during downtrends).</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">TREND_DIRECTION</div>
+              <div class="field-description">Overall trend direction based on multiple indicators: "UP" or "DOWN".</div>
+              <span class="field-type">String</span>
+            </div>
+          </div>
+
+          <!-- Volatility Indicators -->
+          <div class="category-section" id="volatility">
+            <h2 class="category-title">
+              <i class="fas fa-wave-square"></i>
+              Volatility Indicators
+              <span class="badge-count">12</span>
+            </h2>
+
+            <div class="field-item">
+              <div class="field-name">BB_Lower</div>
+              <div class="field-description">Bollinger Band Lower. Middle band minus (2 × standard deviation). Price touching lower band may indicate oversold.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">BB_Middle</div>
+              <div class="field-description">Bollinger Band Middle (20-period Simple Moving Average). Central reference line.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">BB_Upper</div>
+              <div class="field-description">Bollinger Band Upper. Middle band plus (2 × standard deviation). Price touching upper band may indicate overbought.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">BB_BWidth</div>
+              <div class="field-description">Bollinger Band Width percentage. (Upper - Lower) / Middle × 100. Measures volatility expansion/contraction.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">ATR</div>
+              <div class="field-description">Average True Range. Measures market volatility by calculating average of true ranges over a period. Higher values = higher volatility.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">ATR_UPPER</div>
+              <div class="field-description">ATR Upper Band. Close + (ATR × multiplier). Potential resistance during volatile periods.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">ATR_LOWER</div>
+              <div class="field-description">ATR Lower Band. Close - (ATR × multiplier). Potential support during volatile periods.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">ATR_MID</div>
+              <div class="field-description">ATR Middle Line. Average of ATR upper and lower bands.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">ATR_POSITION</div>
+              <div class="field-description">Price position within ATR bands (percentage). 0 = at lower band, 100 = at upper band.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">ATR_BREAKOUT_UP</div>
+              <div class="field-description">Binary flag (0/1). 1 indicates price broke above ATR upper band (potential bullish breakout).</div>
+              <span class="field-type">Integer</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">ATR_BREAKOUT_DN</div>
+              <div class="field-description">Binary flag (0/1). 1 indicates price broke below ATR lower band (potential bearish breakout).</div>
+              <span class="field-type">Integer</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">SWING_HIGH</div>
+              <div class="field-description">Recent swing high price level. Local maximum used for pattern recognition and support/resistance.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">SWING_LOW</div>
+              <div class="field-description">Recent swing low price level. Local minimum used for pattern recognition and support/resistance.</div>
+              <span class="field-type">Float</span>
+            </div>
+          </div>
+
+          <!-- Volume Indicators -->
+          <div class="category-section" id="volume">
+            <h2 class="category-title">
+              <i class="fas fa-signal"></i>
+              Volume Indicators
+              <span class="badge-count">3</span>
+            </h2>
+
+            <div class="field-item">
+              <div class="field-name">OBV</div>
+              <div class="field-description">On-Balance Volume. Cumulative volume indicator that adds volume on up days and subtracts on down days. Confirms price trends.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">CMF</div>
+              <div class="field-description">Chaikin Money Flow (-1 to +1). Measures buying/selling pressure over a period. Positive values indicate accumulation, negative indicate distribution.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">AD</div>
+              <div class="field-description">Accumulation/Distribution Line. Cumulative indicator combining price and volume to show money flow. Rising = accumulation, falling = distribution.</div>
+              <span class="field-type">Float</span>
+            </div>
+          </div>
+
+          <!-- Support & Resistance -->
+          <div class="category-section" id="support">
+            <h2 class="category-title">
+              <i class="fas fa-layer-group"></i>
+              Support & Resistance Levels
+              <span class="badge-count">24</span>
+            </h2>
+
+            <div class="field-item">
+              <div class="field-name">FIB_ZONE</div>
+              <div class="field-description">Current Fibonacci retracement zone: "ABOVE_236", "BETWEEN_236_382", "BETWEEN_382_500", "BETWEEN_500_618", "BELOW_618", etc.</div>
+              <span class="field-type">String</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_236</div>
+              <div class="field-description">23.6% Fibonacci retracement level. First support/resistance after a move.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_382</div>
+              <div class="field-description">38.2% Fibonacci retracement level. Moderate support/resistance.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_500</div>
+              <div class="field-description">50% Fibonacci retracement level. Key psychological and technical level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_618</div>
+              <div class="field-description">61.8% Fibonacci retracement level (Golden Ratio). Strong support/resistance, often reversal point.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_786</div>
+              <div class="field-description">78.6% Fibonacci retracement level. Deep retracement level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">PP</div>
+              <div class="field-description">Pivot Point. (High + Low + Close) / 3. Central reference for intraday trading.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">R1</div>
+              <div class="field-description">Resistance 1. (2 × Pivot Point) - Low. First resistance level above pivot.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">R2</div>
+              <div class="field-description">Resistance 2. Pivot Point + (High - Low). Second resistance level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">R3</div>
+              <div class="field-description">Resistance 3. High + 2 × (Pivot Point - Low). Third resistance level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">S1</div>
+              <div class="field-description">Support 1. (2 × Pivot Point) - High. First support level below pivot.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">S2</div>
+              <div class="field-description">Support 2. Pivot Point - (High - Low). Second support level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">S3</div>
+              <div class="field-description">Support 3. Low - 2 × (High - Pivot Point). Third support level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_R1</div>
+              <div class="field-description">Fibonacci-based Resistance 1. Alternative resistance calculation using Fibonacci ratios.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_R2</div>
+              <div class="field-description">Fibonacci-based Resistance 2.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_R3</div>
+              <div class="field-description">Fibonacci-based Resistance 3.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_S1</div>
+              <div class="field-description">Fibonacci-based Support 1. Alternative support calculation using Fibonacci ratios.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_S2</div>
+              <div class="field-description">Fibonacci-based Support 2.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">FIB_S3</div>
+              <div class="field-description">Fibonacci-based Support 3.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">PREV_HIGH</div>
+              <div class="field-description">Previous period's high price. Important resistance level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">PREV_LOW</div>
+              <div class="field-description">Previous period's low price. Important support level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">PREV_CLOSE</div>
+              <div class="field-description">Previous period's closing price. Reference for gap analysis.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">WEEK_HIGH</div>
+              <div class="field-description">Highest price in the past week. Weekly resistance level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">WEEK_LOW</div>
+              <div class="field-description">Lowest price in the past week. Weekly support level.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">DIST_PREV_HIGH</div>
+              <div class="field-description">Percentage distance from previous high. Negative = below, positive = above.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">DIST_PREV_LOW</div>
+              <div class="field-description">Percentage distance from previous low. Shows proximity to recent support.</div>
+              <span class="field-type">Float</span>
+            </div>
+          </div>
+
+          <!-- Price Data -->
+          <div class="category-section" id="price">
+            <h2 class="category-title">
+              <i class="fas fa-dollar-sign"></i>
+              Price & Volume Data
+              <span class="badge-count">6</span>
+            </h2>
+
+            <div class="field-item">
+              <div class="field-name">Close</div>
+              <div class="field-description">Closing price for the period. Most commonly used price for technical analysis.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Open</div>
+              <div class="field-description">Opening price for the period. First traded price in the timeframe.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">High</div>
+              <div class="field-description">Highest price reached during the period.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Low</div>
+              <div class="field-description">Lowest price reached during the period.</div>
+              <span class="field-type">Float</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">Volume</div>
+              <div class="field-description">Total number of shares traded during the period. Higher volume indicates stronger conviction.</div>
+              <span class="field-type">Integer</span>
+            </div>
+
+            <div class="field-item">
+              <div class="field-name">CPrice</div>
+              <div class="field-description">Current Price. Latest available price, may match Close for completed periods.</div>
+              <span class="field-type">Float</span>
+            </div>
+          </div>
+
+          <!-- Download Section -->
+          <div class="text-center mt-5 mb-4">
+            <div class="category-section" style="border-left: 4px solid #ffc107;">
+              <h3 class="text-white mb-3">
+                <i class="fas fa-download me-2"></i>Get Access to This Data
+              </h3>
+              <p class="text-white-50 mb-4">
+                This codebook documents all 70+ indicators available in our Professional and Enterprise plans.
+              </p>
+              <a href="index.html#pricing" class="btn btn-primary btn-lg me-3">
+                <i class="fas fa-chart-line me-2"></i>View Pricing
+              </a>
+              <a href="SampleData.pdf" class="btn btn-outline-light btn-lg" download>
+                <i class="fas fa-file-download me-2"></i>Download Sample
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer bg-black small text-center text-white-50 py-4">
+      <div class="container px-4 px-lg-5">
+        <p class="mb-2">Copyright &copy; Awaken Analytics 2025. All rights reserved.</p>
+        <p class="mb-0">Professional financial data platform for traders and developers</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap & Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <!-- Search Functionality -->
+    <script>
+      document.getElementById('searchBox').addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        const fieldItems = document.querySelectorAll('.field-item');
+
+        fieldItems.forEach(item => {
+          const fieldName = item.querySelector('.field-name').textContent.toLowerCase();
+          const fieldDesc = item.querySelector('.field-description').textContent.toLowerCase();
+
+          if (fieldName.includes(searchTerm) || fieldDesc.includes(searchTerm)) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        // Show/hide category sections if all items are hidden
+        document.querySelectorAll('.category-section').forEach(section => {
+          const visibleItems = section.querySelectorAll('.field-item[style="display: block;"]');
+          if (visibleItems.length === 0 && searchTerm !== '') {
+            section.style.display = 'none';
+          } else {
+            section.style.display = 'block';
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
